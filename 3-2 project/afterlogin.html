@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <img src="icon.jpg" style="width:150px;height:100px;">
+  <a href="mainpage.html" style="float: right;margin-top: 70px;">log out</a>
+<div class="header" id="myheader">
+  <ul class="nav nav-tabs nav-justified" role="tablist" style="background-color:black">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab"   style="background-color:black; color:white" href="#about">about</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab"  style="background-color:black; color:white" href="#stops">stops</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab"   style="background-color:black; color:white" href="#menu2">notice board</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab"   style="background-color:black; color:white" href="#mybus">my bus</a>
+    </li>
+  </ul>
+</div>
+
+    <div class="tab-content">
+    <div id="about" class="container tab-pane fade"><br>
+      <h3>ABOUT</h3>
+      <p>
+     This project helps the students  to track the location of the college bus easily by using the GPS . This project  solves the  real time problem, which students face in these days.One should enroll themselves , The students and faculty information i.e name and bus no.   is stored in the  data base ,if the students successfully enrolled they can know the bus location where they are exactly according to the route.This can help the student take another bus in the same route in case if they miss their bus by tracking the busses where exactly they are and even to track their own bus so that  they can reach the bus .Vehicle tracking system using Google maps, GPS module used for getting location . Initially the GPS continuously takes input data from the satellite and stores the latitude and longitude values. If we have to track the vehicle, we need to send a message to GSM device, by which it gets activated. Wifi module to send data to  mobile or computer over wifi.
+    </p>
+    </div>
+        <div id="stops" class="container tab-pane fade"><br>
+       <h1>"STOPS AND THEIR TIMINGS"</h1>
+       <p> <iframe src="stop.php" height="600" width="1100"></iframe></p>
+ 
+</div>
+
+
+    
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>notice</h3>
+      <div style="height: 400px; width: 1100px;background-color: grey;">
+        <ol style="color: black;">
+
+          
+          <li style="padding: 5px;">"From 09-03-2018 2nd year students of  "I" bus should get into either "G" or "C" bus .Only The students who belongs to the   stops Gajuwaka ,Bhpv, Autonagar till 29-03-2018" </li>
+          <li style="padding: 5px;">"From 09-03-2018 2nd year students of  "P" bus should get into either "R" or "Q" bus .The students who belongs to  stops Gajuwaka ,Bhpv, Autonagar till 29-03-2018 "</li>
+          <li style="padding: 5px;">"From 09-03-2018 2nd year students of  "O" bus should get into either "B" or "U" bus .The students who belongs to the  stops MVP ,Ushodaya Junction, Teja Appartments till 29-03-2018 "</li>
+        </ol>
+
+      </div>
+    </div>
+    <div id="mybus" class="container tab-pane active"><br>
+      <h3>my bus</h3>
+      <p>
+     <iframe src="map1.html" height="600" width="1100"></iframe>
+    </p>
+    </div>
+  </div>
+</div>
+<script>
+  window.onscroll=function(){myFunction()};
+  var header=document.getElementById("myheader");
+  var sticky=header.offsetTop;
+  function myFunction()
+  {
+    if(window.pageYOffset>=sticky){
+      header.classList.add("sticky");
+    }else{
+      header.classList.remove("sticky");
+    }
+  }
+</script>
+
+</body>
+</html>
